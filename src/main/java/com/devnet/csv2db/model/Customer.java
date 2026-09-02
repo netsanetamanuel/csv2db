@@ -6,20 +6,21 @@ import java.time.LocalDate;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Data
 @Builder
 @Table(name="customers")
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Customer {
 
 	@Id
 	private String customerId;
 	private String firstName;
-	private String lastgName;
+	private String lastName;
 	private String company;
     private String city;
     private String country;
